@@ -84,10 +84,12 @@ foreach ( $options as $field ) {
 
         case "checkbox":
 
+            $current_value = array_key_exists( $field['id'], $current ) ? $current[ $field['id'] ] : 'off';
+
     ?> <div class="wpa_options-input wpa_checkbox cf">
         <label for="<?php echo $field['id']; ?>"><?php echo $field['name']; ?></label>
 
-        <input type="checkbox" name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="on" <?php checked($current[ $field['id'] ], "on") ?> />
+        <input type="checkbox" name="<?php echo $field['id']; ?>" id="<?php echo $field['id']; ?>" value="on" <?php checked( $current_value, "on") ?> />
 
         <small><?php echo $field['desc']; ?></small> </div> <?php 
             break;
