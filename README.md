@@ -4,10 +4,12 @@
 
 *Features:*
 
-* Shortcode support
-* SVG sharing icons 
-* Optimized inline CSS for speed
-* No external dependencies
+* Shortcode
+* PHP Template
+* Auto-insert Option
+* Micro SVG Icons
+* Optimized Inline CSS
+* No External Dependencies
 
 *Todo:*
 
