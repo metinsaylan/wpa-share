@@ -1,12 +1,12 @@
 <div class="card primary">
-Do you like <strong>WPA Share</strong>? You have many ways to help us:
+Do you like <strong>WPA Share</strong>? Here are a few ways you can support us: 
 <ul>
     <li>⭐ Rate it on <a href="https://wpassist.me/plugins/wpa-share/" target="_blank" >our website</a></li>
     <li>☕ <a href="https://wpassist.me/donate/" target="_blank" >Donate</a> using Stripe</li>
     <li>📢 <a href="https://wpassist.me/spread/wpa-share-plugin/" target="_blank" >Spread the word</a></li>
 </ul>
 
-If you have any suggestions, or bug reports, please <a href="https://wpassist.me/plugins/wpa-share/">write to us</a> on the <a href="https://wpassist.me/plugins/wpa-share/">plugin page</a>.
+If you have any suggestions or bug reports, please <a href="https://wpassist.me/plugins/wpa-share/">write to us</a> on the <a href="https://wpassist.me/plugins/wpa-share/">plugin page</a>.
 </div>
 
 <div class="card">
