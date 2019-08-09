@@ -1,5 +1,5 @@
 <div class="card primary">
-Do you like <strong>WPA Share</strong>? You have many ways to show your appreciation:
+Do you like <strong>WPA Share</strong>? You have many ways to help us:
 <ul>
     <li>⭐ Rate it on <a href="https://wpassist.me/plugins/wpa-share/" target="_blank" >our website</a></li>
     <li>☕ <a href="https://wpassist.me/donate/" target="_blank" >Donate</a> using Stripe</li>
