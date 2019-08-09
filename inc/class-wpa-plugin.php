@@ -144,7 +144,7 @@ class WPA_Plugin{
     
         $options_nav = $this->options_nav;
     
-        include_once( "wpa-options-template.php" );
+        include_once( WPA_SHARE_PLUGIN_PATH . "inc/wpa-options-template.php" );
 
     }
 
