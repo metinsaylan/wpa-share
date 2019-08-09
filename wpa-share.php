@@ -23,7 +23,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Invalid request.' );
 }
 
+define( 'WPA_SHARE_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'WPA_SHARE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
 if( ! function_exists( 'wpa_share' ) ){
+
+    global $wpa_share;
+
+    /* Include plugin core */
+    require_once( WPA_SHARE_PLUGIN_PATH . 'inc/class-wpa-plugin.php' );
+    require_once( WPA_SHARE_PLUGIN_PATH . 'wpa-share-options.php' );
+    
+    $wpa_share = new WPA_Plugin(
+        'WPA Share',
+        'wpa-share'
+    );
+
+    $wpa_share->options = $wpa_share_options;
+    $wpa_share->options_nav = array( 
+        array(
+            'label' => 'Plugin Page',
+            'link' => 'https://wpassist.me/plugins/wpa-share/'
+        ),
+        array(
+            'label' => 'Usage',
+            'link' => 'https://wpassist.me/docs/wpa-share-usage/'
+        ),
+        array(
+            'label' => 'Shortcode',
+            'link' => 'https://wpassist.me/docs/wpa-share-shortcode/'
+        ),
+        array(
+            'label' => 'Donate',
+            'link' => 'https://wpassist.me/donate/'
+        )
+    );
+
+    function get_wpa_share_option( $key, $default ){
+        global $wpa_share;
+        return $wpa_share->get_setting( $key, $default );
+    }
 
     add_action( 'wp_head', 'wpa_share_print_styles' );
     function wpa_share_print_styles(){
@@ -72,5 +111,20 @@ if( ! function_exists( 'wpa_share' ) ){
         
         return $share_buttons;
     }
+
+    /* Add settings link to plugin links */
+    $wpa_share_hook = plugin_basename(__FILE__);
+    add_filter( "plugin_action_links_$wpa_share_hook", 'wpa_share_add_settings_link' );
+    function wpa_share_add_settings_link( $links ) {
+        global $wpa_share;
+        
+        $settings_link = '<a href="options-general.php?page=' . $wpa_share->options_page . '">Settings</a>';
+        array_push( $links, $settings_link );
+        return $links;
+    }
+    
+    
+    
+    
 
 }
