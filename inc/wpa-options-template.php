@@ -47,6 +47,7 @@ foreach ( $options as $field ) {
         case 'close': 
             echo '<div class="wpa_options-section-footer">';
             submit_button( 'Save Changes', 'primary', 'save', false );
+            echo '<input type="hidden" name="action" value="save" />';
             echo '</div><!-- section-footer -->';
             echo '</div><!-- section -->';
             break;
@@ -99,6 +100,15 @@ foreach ( $options as $field ) {
 ?>
 </form> 
 
+<div class="dz">
+<form method="post">
+    <p><input type="hidden" name="action" value="reset" />
+    Danger Zone: <?php submit_button( 'Reset Settings', 'secondary', 'save', false ); ?>
+    <br /><small>You will lose all your current settings.</small>
+</p>
+</form>
+</div>
+
 <?php if(WP_DEBUG){ ?>
     <div class="debug">
     <h3>Debug information</h3>
@@ -112,9 +122,7 @@ foreach ( $options as $field ) {
 </div><!-- c1 -->
 <div class="wpa_options-c2">
     <div class="sb">
-        <div class="card">
-            Lorem Ipsum dolor sit amet.
-        </div>
+<?php include_once( WPA_SHARE_PLUGIN_PATH . 'inc/wpa-sidebar.php' ) ?>
     </div>
 </div><!-- c2 -->
 </div><!-- page -->
