@@ -10,6 +10,11 @@
     border: 0;
 }
 
+.wpa_options .card.primary {
+    background: #FFF59D;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 @media (min-width: 1024px){
     .wpa_options-page{ 
         display: flex;
