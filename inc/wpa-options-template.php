@@ -9,6 +9,8 @@
  * - $options       : Array of options to be rendered
  */
 
+global $wpa_sidebar_template;
+
 /* Title */
 echo '<h2>' . esc_html( $title ) . '</h2>'; 
 
@@ -123,8 +125,8 @@ foreach ( $options as $field ) {
 </div><!-- wrapper -->
 </div><!-- c1 -->
 <div class="wpa_options-c2">
-    <div class="sb">
-<?php include_once( WPA_SHARE_PLUGIN_PATH . 'inc/wpa-sidebar.php' ) ?>
-    </div>
+    <div class="sb"><?php 
+        include_once( $wpa_sidebar_template ); 
+    ?></div>
 </div><!-- c2 -->
 </div><!-- page -->
