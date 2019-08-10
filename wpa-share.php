@@ -36,7 +36,8 @@ if( ! function_exists( 'wpa_share' ) ){
     
     $wpa_share = new WPA_Plugin(
         'WPA Share',
-        'wpa-share'
+        'wpa-share', 
+        WPA_SHARE_PLUGIN_PATH
     );
 
     $wpa_share->options = $wpa_share_options;

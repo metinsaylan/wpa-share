@@ -118,6 +118,8 @@ foreach ( $options as $field ) {
     <h3>Debug information</h3>
     <p>Note: You are seeing this because your <code>WP_DEBUG</code> variable is set to <code>true</code>.</p>
     <pre><?php print_r( $current ) ?></pre>
+
+    <pre>sidebar:<?php echo $wpa_sidebar_template; ?></pre>
     </div><!-- debug -->
 <?php } ?>
 

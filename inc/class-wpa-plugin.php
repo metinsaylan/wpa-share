@@ -5,6 +5,7 @@ if( ! class_exists( 'WPA_Plugin' ) ){
         function __construct( $name, $id, $dir ){
             $this->name = $name;
             $this->id = $id;
+            $this->plugin_dir = $dir;
 
             $this->options_page = $id;
             $this->settings_key = $id;
@@ -12,7 +13,6 @@ if( ! class_exists( 'WPA_Plugin' ) ){
             $this->settings = array(); // current settings
             $this->options = array(); // array for settings page
             $this->options_nav = array();
-            $this->plugin_dir = $dir;
 
             add_action('admin_menu', array( &$this, 'admin_header') );
         }
@@ -146,7 +146,7 @@ if( ! class_exists( 'WPA_Plugin' ) ){
         
             $options_nav = $this->options_nav;
         
-            $wpa_sidebar_template = $this->plugin_dir . 'inc/wpa-sidebar.php';
+            $wpa_sidebar_template = $this->plugin_dir . 'wpa-sidebar.php';
             include_once( $this->plugin_dir . "inc/wpa-options-template.php" );
 
         }
