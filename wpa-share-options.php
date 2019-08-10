@@ -6,6 +6,12 @@ $wpa_auto_insert_locations = array(
     'both' => 'Both'
 );
 
+$wpa_inpost_style = array(
+    'basic'=> 'Basic',
+    'round' => 'Round', 
+    'flex' => 'Flex'
+);
+
 $wpa_share_options = array(
 
     array(
@@ -17,7 +23,7 @@ $wpa_share_options = array(
         array(  "name" => "Auto Insert",
         "desc" => "Enables automatic insert of sharing buttons on posts/pages",
         "id" => "auto-insert",
-        "std" => "off",
+        "std" => "on",
         "type" => "checkbox"),
     
         array(  "name" => "Auto Insert Location",
@@ -31,6 +37,13 @@ $wpa_share_options = array(
         "id" => "output-css",
         "std" => "on",
         "type" => "checkbox"),
+
+        array(  "name" => "InPost Buttons Style",
+        "desc" => "Select appearance",
+        "id" => "inpost-style",
+        "std" => "basic",
+        "type" => "select",
+        "options" => $wpa_inpost_style ),
     
     array( "type" => "close" )
 
