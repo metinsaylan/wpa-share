@@ -21,12 +21,15 @@
     }
 
     .wpa_options-c1 {
-        flex: 1 0 auto;
+        flex: 1 1 auto;
     }
 
     .wpa_options-c2 {
-        flex: 0 0 300px;
-        padding: 20px;
+        flex: 0 1 300px; 
+    }
+
+    .sb {
+        padding: 0 15px 0;
     }
 }
 
