@@ -3,7 +3,7 @@
  * Plugin Name: WPA Share
  * Plugin URI:  https://wpassist.me/plugins/wpa-share/
  * Description: Performace optimized sharing plugin for high volume WordPress websites.
- * Version:     1.0
+ * Version:     1.0.1
  * Author:      Metin Saylan
  * Author URI:  https://metinsaylan.com/
  * License:     GPLv2 or later
